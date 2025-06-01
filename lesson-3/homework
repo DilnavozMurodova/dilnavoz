@@ -1,0 +1,29 @@
+Homework 3
+1. Bulk insert--Imports a data file into a database table or view in a user-specified format in SQL Server.
+2.
+3. Create table Products( ProductId int Primary Key, Productname varchar (50),Price decimal (10,2))
+Select *from Products
+4. InSert into Products (ProductId,Productname,Price) values (1,'Laptop',600) 
+   InSert into Products (ProductId,Productname,Price) values (2, 'Monitor',500)
+   InSert into Products (ProductId,Productname,Price) values (3,'Mouse',200)
+5. NOT NULL means a column to NOT accept NULL values. Null in other way means zero or empty value. Thus, Null means you can leave that field empty. And Not Null means you cannot leave the value of that field empty.
+6. Alter table Products Add unique (Productname)
+7. A unique constraint in a database ensures that all values within a specific column or a combination of columns are distinct. It prevents duplicate entries in those columns, maintaining data integrity.
+8.Alter Table Products
+  Add  CategoryId int
+9. Create Table Categories (CategoryId int Primary Key, Categoryname varchar (50)unique )
+Select *from Categories 
+10. An identity column is a special type of column in SQL Server that automatically generates sequential values for each row in a table.
+11. --Bulk Insert
+
+12. Alter Table Products
+Add Constraint FK_Procategory
+Foreign Key (PoductId) references Categories(CategoryId) 
+13.The main difference between a primary key vs unique key is that a primary key is a key that uniquely identifies each record in a table but cannot store NULL values. In contrast, a unique key prevents duplicate values in a column and can store NULL values.
+14. Alter Table Products
+  Add Check (Price>=0)
+15.Alter Table Products
+   Add Stock int not null default (0)
+16.Select ISNULL (NULL,0)
+17.A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table. The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
+18.
